@@ -1,0 +1,14 @@
+[
+  {
+    "id": 1,
+    "task": "Client meeting",
+    "completed": true,
+    "due": "2025-07-08"
+  },
+  {
+    "id": 2,
+    "task": "Trip",
+    "completed": false,
+    "due": "2025-06-28"
+  }
+]

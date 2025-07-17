@@ -1,0 +1,12 @@
+[
+  {
+    "id": 1,
+    "task": "trekking",
+    "completed": false
+  },
+  {
+    "id": 2,
+    "task": "client meeting",
+    "completed": true
+  }
+]
