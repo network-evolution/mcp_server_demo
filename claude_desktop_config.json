@@ -1,0 +1,43 @@
+{
+  "mcpServers": {
+    "playwright": {
+      "command": "npx",
+      "args": [
+        "@playwright/mcp@latest"
+      ]
+    },
+    "LANScanner": {
+      "command": "/opt/homebrew/bin/uv",
+      "args": [
+        "run",
+        "--with",
+        "mcp[cli]",
+        "mcp",
+        "run",
+        "/Users/dev/gitdir/ai/new_app/lan_scanner_mcp.py"
+      ]
+    },
+    "NetworkDeviceController": {
+      "command": "/opt/homebrew/bin/uv",
+      "args": [
+        "run",
+        "--with",
+        "mcp[cli], netmiko",
+        "mcp",
+        "run",
+        "/Users/dev/gitdir/mcp_demo_new/network_controller/controller.py"
+      ]
+    },
+    "ToDoManagerWithDate": {
+      "command": "/opt/homebrew/bin/uv",
+      "args": [
+        "run",
+        "--with",
+        "mcp[cli], dateparser",
+        "mcp",
+        "run",
+        "/Users/dev/gitdir/mcp_demo_new/todo_list_apps/todo_list_app_with_date.py"
+      ]
+    }
+  }
+}

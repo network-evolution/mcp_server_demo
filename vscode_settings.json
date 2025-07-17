@@ -1,0 +1,58 @@
+{
+    "files.autoSave": "afterDelay",
+    "redhat.telemetry.enabled": true,
+    "git.autofetch": true,
+    "mcp": {
+        "inputs": [],
+        "servers": {
+            "mcp-server-time": {
+                "command": "/opt/homebrew/bin/uv",
+                "args": [
+                    "run",
+                    "-m",
+                    "mcp_server_time",
+                    "--local-timezone=Asia/Kolkata"
+                ],
+                "env": {}
+            },
+            "playwright": {
+                "command": "npx",
+                "args": [
+                    "@playwright/mcp@latest"
+                ]
+            },
+            "NetworkDeviceController": {
+                "command": "/opt/homebrew/bin/uv",
+                "args": [
+                    "run",
+                    "--with",
+                    "mcp[cli], netmiko",
+                    "mcp",
+                    "run",
+                    "/Users/dev/gitdir/mcp_demo_new/network_controller/controller.py"
+                ]
+                },
+            "ToDoManagerSimple": {
+            "command": "/opt/homebrew/bin/uv",
+            "args": [
+                "run",
+                "--with",
+                "mcp[cli]",
+                "mcp",
+                "run",
+                "/Users/dev/gitdir/mcp_demo_new/todo_list_apps/todo_list_app_simple.py"
+            ]
+            }
+        }
+    },
+    "git.enableSmartCommit": true,
+    "chat.mcp.discovery.enabled": true,
+    "terminal.integrated.inheritEnv": false,
+    "python.terminal.activateEnvironment": false,
+    "github.copilot.enable": {
+        "*": false,
+        "plaintext": false,
+        "markdown": false,
+        "scminput": false
+    }
+}
